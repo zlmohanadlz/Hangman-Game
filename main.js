@@ -37,19 +37,22 @@ async function initGame() {
     let randomWordIndex = Math.floor(Math.random() * wordsInCategory.length);
     let randomWord = wordsInCategory[randomWordIndex];
 
-    console.log(randomWord, randomCategory);
+    // console.log(randomWord, randomCategory); for showing just
 
     // show category
     let category = document.querySelector(".category span");
     category.textContent = randomCategory;
 
+    let success = 0; // if the player has succeeded in guessing the word
     // generate guess word letters
     let guess = document.querySelector(".letters-guess");
     let lettersArr = Array.from(randomWord);
 
     lettersArr.forEach((letter) => {
         let span = document.createElement("span");
-        letter === " " ? (span.classList = "has-space") : (span.className = "");
+        letter === " "
+            ? ((span.classList = "has-space"), success++)
+            : (span.className = "");
         guess.append(span);
     });
 
@@ -57,7 +60,6 @@ async function initGame() {
     let allLettersSpan = document.querySelectorAll(".letters-guess span");
     let wrongAttempts = 0;
     let theDraw = document.querySelector(".hangman-draw");
-    let success = 0;
 
     document.addEventListener("click", function (e) {
         if (e.target.className === "letter-box") {
