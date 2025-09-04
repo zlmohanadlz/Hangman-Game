@@ -51,6 +51,10 @@ Hangman-Game/
 -   Mobile-friendly interface.
 -   Additional categories and word complexity levels.
 
+## 💡 Author
+
+**Mohanad Ayoub** – [GitHub Profile](https://github.com/zlmohanadlz)
+
 ---
 
 Enjoy the game and have fun guessing! 🕹️
