@@ -73,7 +73,7 @@ async function initGame() {
                     allLettersSpan[index].textContent = wordLetter;
                     success++;
                     if (success === lettersArr.length) {
-                        endGameSuccess();
+                        endGameSuccess(wrongAttempts);
                         letterContainer.classList.add("finished");
                     }
                 }
@@ -105,9 +105,11 @@ function endGameFail(word) {
     document.body.append(div);
 }
 
-function endGameSuccess() {
+function endGameSuccess(wrongAttempts) {
     let div = document.createElement("div");
-    div.append(`Good Job. You've Guessed Right`);
+    div.append(
+        `Good Job. You've Guessed Right And You had Wrong Guess For ${wrongAttempts} Times`
+    );
     div.classList.add("popup");
     document.body.append(div);
 }
