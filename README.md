@@ -37,6 +37,7 @@ Check out the live version here: [Hangman Game](https://zlmohanadlz.github.io/Ha
 
 ## 📁 Project Structure
 
+```
 Hangman-Game/
 │
 ├── index.html # Main game page
@@ -44,6 +45,7 @@ Hangman-Game/
 ├── script.js # Game logic
 ├── words.json # Word categories and lists
 └── audio/ # Success and error sounds
+```
 
 ## ⚡ Future Improvements
 
